@@ -25,7 +25,7 @@ SECRET_KEY = 'p2n3le*yli@i*)quey_j%x4(%94vg+^bki4-^(&o_#+kyk$dt('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ashleys-todos.herokuapp.com','127.0.0.1','localhost']
 
 
 # Application definition
@@ -47,9 +47,10 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 
+    'django.middleware.security.SecurityMiddleware',
+
     'whitenoise.middleware.WhiteNoiseMiddleware',
 
-    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -138,4 +139,6 @@ STATICFILES_DIRS = [
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
+    "https://ashleys-todos.herokuapp.com"
+    "http://127.0.0.1:3000"
 ]
