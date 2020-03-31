@@ -1,1 +1,2 @@
-web: gunicorn crm1.wsgi --log-file -
+release: python manage.py migrate
+web: gunicorn todo.wsgi --log-file -
