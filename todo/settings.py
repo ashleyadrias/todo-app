@@ -65,7 +65,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'frontend/build')
+            os.path.join(BASE_DIR, 'build')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -141,6 +141,6 @@ STATICFILES_DIRS = [
 
 CORS_ORIGIN_WHITELIST = [
     "http://localhost:3000",
-    "https://ashleys-todos.herokuapp.com"
+    "https://ashleys-todos.herokuapp.com",
     "http://127.0.0.1:3000"
 ]
